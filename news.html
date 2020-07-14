@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!-- 使用 HTML5 doctype，不区分大小写 -->
+<html lang="zh-cmn-Hans">
+<!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
+
+<head>
+    <!-- 声明文档使用的字符编码 -->
+    <meta charset='utf-8'>
+    <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 页面描述 -->
+    <meta name="description" content="不超过150个字符" />
+    <!-- 页面关键词 -->
+    <meta name="keywords" content="" />
+    <!-- 网页作者 -->
+    <meta name="author" content="name, email@gmail.com" />
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="index,follow" />
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+    <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz -->
+    <!-- iOS 设备 begin -->
+    <meta name="apple-mobile-web-app-title" content="标题">
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telphone=no, email=no" />
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 不让百度转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- iOS 图标 begin -->
+    <link rel="apple-touch-icon-precomposed" href="/apple-touch-icon-57x57-precomposed.png" />
+    <!-- iPhone 和 iTouch，默认 57x57 像素，必须有 -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114-precomposed.png" />
+    <!-- Retina iPhone 和 Retina iTouch，114x114 像素，可以没有，但推荐有 -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144-precomposed.png" />
+    <!-- Retina iPad，144x144 像素，可以没有，但推荐有 -->
+    <!-- iOS 图标 end -->
+    <!-- iOS 启动画面 begin -->
+    <link rel="apple-touch-startup-image" sizes="768x1004" href="/splash-screen-768x1004.png" />
+    <!-- iPad 竖屏 768 x 1004（标准分辨率） -->
+    <link rel="apple-touch-startup-image" sizes="1536x2008" href="/splash-screen-1536x2008.png" />
+    <!-- iPad 竖屏 1536x2008（Retina） -->
+    <link rel="apple-touch-startup-image" sizes="1024x748" href="/Default-Portrait-1024x748.png" />
+    <!-- iPad 横屏 1024x748（标准分辨率） -->
+    <link rel="apple-touch-startup-image" sizes="2048x1496" href="/splash-screen-2048x1496.png" />
+    <!-- iPad 横屏 2048x1496（Retina） -->
+    <link rel="apple-touch-startup-image" href="/splash-screen-320x480.png" />
+    <!-- iPhone/iPod Touch 竖屏 320x480 (标准分辨率) -->
+    <link rel="apple-touch-startup-image" sizes="640x960" href="/splash-screen-640x960.png" />
+    <!-- iPhone/iPod Touch 竖屏 640x960 (Retina) -->
+    <link rel="apple-touch-startup-image" sizes="640x1136" href="/splash-screen-640x1136.png" />
+    <!-- iPhone 5/iPod Touch 5 竖屏 640x1136 (Retina) -->
+    <!-- iOS 启动画面 end -->
+    <!-- iOS 设备 end -->
+    <meta name="msapplication-TileColor" content="#000" />
+    <!-- Windows 8 磁贴颜色 -->
+    <meta name="msapplication-TileImage" content="icon.png" />
+    <!-- Windows 8 磁贴图标 -->
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="/rss.xml" />
+    <!-- 添加 RSS 订阅 -->
+    <!-- <link rel="shortcut icon" type="image/ico" href="/favicon.ico" /> -->
+    <!-- 添加 favicon icon -->
+    <!-- sns 社交标签 begin -->
+    <!-- 参考微博API -->
+    <meta property="og:type" content="类型" />
+    <meta property="og:url" content="URL地址" />
+    <meta property="og:title" content="标题" />
+    <meta property="og:image" content="图片" />
+    <meta property="og:description" content="描述" />
+    <!-- sns 社交标签 end -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/ihover.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!--屏幕宽度大于760px时 使用样式1-->
+    <link rel="stylesheet" type="text/css" media="(min-width:760px)" href="css/style.css" />
+    <!--屏幕宽度小于760px时 使用样式2-->
+    <link rel="stylesheet" type="text/css" media="(max-width:760px)" href="css/style2.css" />
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>Waves光波社区——最大的Waves中文社区</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="https://cdn.bootcss.com/vue-router/3.0.1/vue-router.min.js"></script>
+</head>
+<style>
+  .navbar {
+    border-bottom: 1px solid #eee;
+}
+</style>
+<body>
+    <div class="wrapper" id="app">
+        <!-- 导航 -->
+        <div class="navbar navbar-default navbar-fixed-top navcation">
+            <!-- <div class="container"> -->
+            <div class="navbar-header">
+                <div class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><img src="images/menu_30.png" alt="">菜单</div>
+                <a class="navbar-brand hidden-sm">
+                    <img class="navbar_brand_logo" src="images/waves-logo-black.svg" alt="">
+                </a>
+                <a class="m_download" href="https://waves.exchange/" target="_blank">交易所</a>
+            </div>
+            <div class="navbar-collapse collapse" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li class="nav_li"><a href="/index.html" target="_blank">首页</a></li>
+                    <li class="nav_li"><a href="/news.html" target="_blank">新闻</a></li>
+                    <li class="nav_li"><a href="https://wavesprotocol.org/protocol" target="_blank">协议</a></li>
+                    <li class="nav_li"><a href="https://wavesprotocol.org/developers" target="_blank">开发者</a></li>
+                    <li class="nav_li"><a href="https://wavesprotocol.org/use-cases" target="_blank">用例</a></li>
+                    <li class="nav_li"><a class="reddot" href="https://medium.com/wavesprotocol" target="_blank">博客</a></li>
+                </ul>
+                <ul class="hidden-xs nav navbar-nav navbar-right">
+                    <li class="download">
+                        <a href="https://waves.exchange/" style="color: aliceblue;" target="_blank">
+                            Waves 交易所</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- </div> -->
+        </div>
+        
+        <div class="news">
+          <div class="container">
+                <template>
+                <div class="news_item" v-for="item,index in newsItem" :key="index">
+                  <div class="row" @click="toDeail(item.id)">
+                  <div class="col-md-4 col-ms-4">
+                    <div class="news_item_img">
+                      <img :src="defaultImg" alt="" v-real-img="item.thumbnailurl">
+                    </div>
+                  </div>
+                  <div class="col-md-8 col-sm-8">
+                    <div class="news_item_detail">
+                      <div class="news_item_detail_title" v-text="item.title.rendered"></div>
+                      <div class="news_item_detail_desc" v-html="item.excerpt.rendered"></div>
+                      <div class="news_item_detail_mark">
+                        <div class="text-left col-md-6 col-sm-6 news_item_detail_date">{{item.date | dateFilter}}</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </div>
+                <div class="news_page">
+                  <div class="col-md-6 col-sm-6 text-right news_page_previous" @click="pages(0)">上一页</div>
+                  <div class="col-md-6 col-sm-6 text-left news_page_next" @click="pages(1)">下一页</div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </div>
+        <!-- 加入 -->
+        <div class="join">
+            <div class="container">
+                <div class="join_us">
+                    <h3>Waves Platform</h3>
+                    <div class="line border_white"></div>
+                    <p class="text-center">Waves最初于2016年推出。</p>
+                    <p class="text-center">开放式区块链协议与去中心化应用工具包。</p>
+                    <p class="text-center">平台提供去中心化应用的开发和运行工具,并托管各种用例 – 从去中心化交易和稳定币到去中心化自治组织和游戏等。</p>
+                    <p class="text-center">Waves Association通过鼓励研究、管理Waves生态系统和开发Waves技术栈推动全球对Web 3.0范例的采用。</p>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row white-paper">
+                    <div class="col-sm-offset-1 col-xs-6 col-sm-2">
+                        <a href="">waves 白皮书</a>
+                    </div>
+                    <div class="col-sm-offset-1 col-xs-6 col-sm-2">
+                        <a href="">Neutrino 白皮书</a>
+                    </div>
+                    <div class="col-sm-offset-1 col-xs-6 col-sm-2">
+                        <a href="">Gravity 白皮书</a>
+                    </div>
+                    <div class="col-sm-offset-1 col-xs-6 col-sm-2">
+                        <a href="">Enterprise 简介</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="row marg_bottom_30 contact_mark">
+                    <div class="col-sm-offset-2 col-sm-12">
+                        <div class="col-sm-1 col-xs-3 footer_icon">
+                            <a href="https://github.com/wavesplatform/"><i class="fa fa-github fa-lg" style="color: aliceblue;"></i></a>
+                        </div>
+                        <div class="col-sm-1 col-xs-3 footer_icon">
+                            <a href="https://twitter.com/wavesprotocol"><i class="fa fa-twitter fa-lg" style="color: aliceblue;"></i></a>
+                        </div>
+                        <div class="col-sm-1 col-xs-3 footer_icon">
+                            <a href="https://www.youtube.com/channel/UCYDQN4Fo4rGnOZ22L5plNIw"><i class="fa fa-youtube-play fa-lg" style="color: aliceblue;"></i></a>
+                        </div>
+                        <div class="col-sm-1 col-xs-3 footer_icon">
+                            <a href="https://telegram.me/wavesnews"><i class="fa fa-telegram fa-lg" style="color: aliceblue;"></i></a>
+                        </div>
+                        <div class="col-sm-1 col-xs-3 footer_icon">
+                            <a href="https://vk.com/wavesprotocol"><i class="fa fa-vk fa-lg" style="color: aliceblue;"></i></a>
+                        </div>
+                        <div class="col-sm-1 col-xs-3 footer_icon">
+                            <a href="https://blog.wavesplatform.com/"><i class="fa fa-medium fa-lg" style="color: aliceblue;"></i></a>
+                        </div>
+                        <div class="col-sm-1 col-xs-3 footer_icon">
+                            <a href="https://www.reddit.com/r/Wavesplatform/"><i class="fa fa-reddit-alien fa-lg" style="color: aliceblue;"></i></a>
+                        </div>
+                        <div class="col-sm-1 col-xs-3 footer_icon">
+                            <a href="https://discordapp.com/invite/cnFmDyA"><i class="fa fa-heartbeat fa-lg" style="color: aliceblue;"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row marg_bottom_60 footer_nav">
+                    <div class="col-sm-offset-1 col-sm-11">
+                        <div class="col-xs-4 col-sm-2 footer_nav_item">
+                            <a class="floor_nav" href="https://wavesassociation.org/"><img src="images/waves-logo.svg" alt=""></a>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 footer_nav_item">
+                            <p><a class="floor_nav" href="https://wavesassociation.org/">Waves Association</a></p>
+                            <p><a class="floor_nav" href="https://wavesenterprise.com/">Waves Enterprise</a></p>
+                            <p><a class="floor_nav" href="https://medium.com/@neutrinoteam">Neutrino Protocol</a></p>
+                            <p><a class="floor_nav" href="https://medium.com/@gravityprotocol">Gravity Protocol</a></p>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 footer_nav_item">
+                            <p><a class="floor_nav" href="https://docs.wavesprotocol.org/">Documentation</a></p>
+                            <p><a class="floor_nav" href="https://github.com/wavesplatform">GitHub</a></p>
+                            <p><a class="floor_nav" href="https://wavesexplorer.com/">Explorer</a></p>
+                            <p><a class="floor_nav" href="https://stepik.org/course/54415/promo">Web3 Course</a></p>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 footer_nav_item">
+                            <p><a class="floor_nav" href="https://medium.com/wavesprotocol">Blog</a></p>
+                            <p><a class="floor_nav" href="https://wavesprotocol.org/resources">Сommunity resources</a></p>
+                            <p><a class="floor_nav" href="https://wavesprotocol.org/waves-101">Waves 101</a></p>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 footer_nav_item">
+                            <a class="floor_nav" href="https://wavesprotocol.org/mining-and-leasing">Leasing</a>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 footer_nav_item">
+                            <p><a class="floor_nav" href="https://wavesprotocol.org/coockie_policy_2020.pdf">Cookies</a></p>
+                            <p><a class="floor_nav" href="https://wavesprotocol.org/privacy_policy.pdf">Privacy policy</a></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center copy">
+                    Waves 去信任化环境 为基于信任的企业创造
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+  Vue.filter("dateFilter", function(date, formatPattern){  
+    return moment(date).format(formatPattern || "YYYY-MM-DD HH:mm:ss");  
+}); 
+  new Vue({
+    el:'#app',
+    data(){
+      return {
+        newsItem:null,
+        pagination:1,
+        defaultImg:'./images/exchange/Waves.exchange.png'
+      }
+    },
+    created () {
+      axios
+      .get("http://testb.lllll.tech/wp-json/wp/v2/posts?page=1&&_fields=author,id,excerpt,title,link,date,thumbnailurl")
+      .then(response => (this.newsItem = response.data)).then(
+        response=>(console.log(response))
+      );
+   
+    },
+    methods:{
+      pages: function(index){
+        if(index === 0){
+          page = this.pagination -1;
+        }else{
+          page = this.pagination + 1;
+        }
+        // page = this.getQueryVariable('page');
+        if(page < 1){
+          page = 1;
+        }
+        axios
+      .get("http://testb.lllll.tech/wp-json/wp/v2/posts?page="+page+"&&_fields=author,id,excerpt,title,link,date,thumbnailurl")
+      .then(response => {
+         this.$nextTick(function(){
+          this.pagination = page;
+          this.newsItem = []
+          this.newsItem = response.data
+         })
+        
+      }).catch(err =>{
+        console.log(err)
+      })
+      },
+      toDeail (e) {
+        let url = 'detail.html?id='+e;
+        window.open(url, '_blank');
+      }
+    }
+  })
+
+  //全局注册自定义指令，用于判断当前图片是否能够加载成功，可以加载成功则赋值为img的src属性，否则使用默认图片
+Vue.directive('real-img', async function (el, binding) {//指令名称为：real-img
+    let imgURL = binding.value;//获取图片地址
+    if (imgURL) {
+        let exist = await imageIsExist(imgURL);
+        if (exist) {
+            el.setAttribute('src', imgURL);
+        } 
+    }
+})
+
+/**
+ * 检测图片是否存在
+ * @param url
+ */
+ let imageIsExist = function(url) {
+    return new Promise((resolve) => {
+        var img = new Image();
+        img.onload = function () {
+            if (this.complete == true){
+                resolve(true);
+                img = null;
+            }
+        }
+        img.onerror = function () {
+            resolve(false);
+            img = null;
+        }
+        img.src = url;
+    })
+}
+  
+</script>
+</html>
