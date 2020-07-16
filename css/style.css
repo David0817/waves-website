@@ -622,7 +622,7 @@ span.banner_description_subheading_item:first-child {
 }
 
 .join p{
-	font-size: 18px;
+	font-size: 16px;
 	color: rgba(255,255,255,0.5);
 }
 
@@ -777,4 +777,26 @@ footer{
 .news_details_content img{
 	max-width: 680px;
 	height: auto;
+}
+/********team**************/
+.team{
+	text-align: center;
+	padding-top: 75px;
+	color: #fff;
+	background-color: #272030;
+}
+.team img{
+	width: 120px;
+	height: 120px;
+}
+.team .team_item{
+	margin-top: 25px;
+}
+.team .team_item_name{
+	font-size: 16px;
+	font-weight: 700;
+	padding: 10px;
+}
+.team .team_item_position{
+	font-size: 14px;
 }

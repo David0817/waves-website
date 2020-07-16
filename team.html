@@ -114,17 +114,19 @@
 </head>
 <style>
   * {
-	margin: 0;
-	padding: 0;
-	 box-sizing: border-box;
-	}
-	.container{
-		overflow: hidden;
-	}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    overflow: hidden;
+  }
+
   .navbar {
     border-bottom: 1px solid #eee;
   }
-  .nav_news{
+  .nav_team{
     color: #05f !important;
   }
 </style>
@@ -133,81 +135,39 @@
   <div class="wrapper" id="app">
     <!-- header -->
     <header></header>
-
-    <div class="news">
-      <template>
-        <div class="container">
-          <div class="news_details">
-            <div class="row">
-              <div class="col-xs-12">
-                <h2 class="text-center news_details_title">{{newsItem.title.rendered}}</h2>
-                <div class="text-center news_details_date">{{newsItem.date | dateFilter}}</div>
-                <div class="news_details_content" v-html="newsItem.content.rendered">
-                </div>
-              </div>
-            </div>
+    <!-- content -->
+    <div class="team">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 team_item">
+            <img src="./images/team/Sasha Ivanov.jpg" alt="" class="img-circle">
+            <div class="team_item_name">Sasha Ivanov</div>
+            <div class="team_item_position">Waves项目创始人</div>
+            <div class="team_item_position">Waves Association主席</div>
           </div>
-          <!-- <div class="text-center news_details_more" @click="roundNews">-随便看看-</div> -->
+          <div class="col-md-4 team_item">
+            <img src="./images/team/Steve Li.jpeg" alt="" class="img-circle">
+            <div class="team_item_name">Steve Li</div>
+            <div class="team_item_position">Waves中国区负责人</div>
+          </div>
+          <div class="col-md-4 team_item">
+            <img src="./images/team/anonymous.jpeg" alt="" class="img-circle">
+            <div class="team_item_name">Ronica Hu</div>
+            <div class="team_item_position">Waves 中国区市场经理</div>
+          </div>
         </div>
-      </template>
+      </div>
     </div>
-
     <!-- footer -->
     <footer></footer>
   </div>
 </body>
 <script src="js/main.js"></script>
 <script>
-  //juqery
   $(document).ready(function () {
     $("header").load("http://test.lllll.tech/header.html");
     $("footer").load("http://test.lllll.tech/footer.html");
-  });
-  //vue
-  Vue.filter("dateFilter", function (date, formatPattern) {
-    return moment(date).format(formatPattern || "YYYY-MM-DD HH:mm:ss");
-  });
-  new Vue({
-    el: '#app',
-    data() {
-      return {
-        newsItem: {
-          title: {},
-          content: {}
-        }
-      }
-    },
-    mounted() {
-      let id = getQueryVariable('id');
-      axios
-        .get("http://testb.lllll.tech/wp-json/wp/v2/posts/" + id + "?_fields=author,id,excerpt,title,link,date,thumbnailurl,content")
-        .then(response => (this.newsItem = response.data));
-    },
-    method: {
-      roundNews: function () {
-        axios
-          .get("http://testb.lllll.tech/wp-json/wp/v2/posts?per_page=1&&filter[orderby]=rand&&_fields=author,id,excerpt,title,link,date,thumbnailurl,content")
-          .then(response => {
-            this.$nextTick(function () {
-              this.newsItem = response.data[0]
-            })
-
-          }).catch(err => {
-            console.log(err)
-          })
-      }
-    }
   })
-
-  function getQueryVariable(variable) {
-    var query = window.location.search.substring(1);
-    var vars = query.split("&");
-    for (var i = 0; i < vars.length; i++) {
-      var pair = vars[i].split("=");
-      if (pair[0] == variable) { return pair[1]; }
-    }
-    return (false);
-  }
 </script>
 
 </html>
