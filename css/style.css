@@ -104,6 +104,9 @@
 	position: relative;
 	
 }
+.banner .carousel-inner .item img{
+	width: 100%;
+}
 .banner_description {
     position: absolute;
     margin-left: 12%;
