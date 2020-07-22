@@ -114,17 +114,20 @@
 </head>
 <style>
   * {
-	margin: 0;
-	padding: 0;
-	 box-sizing: border-box;
-	}
-	.container{
-		overflow: hidden;
-	}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    overflow: hidden;
+  }
+
   .navbar {
     border-bottom: 1px solid #eee;
   }
-  .nav_news{
+
+  .nav_news {
     color: #05f !important;
   }
 </style>
@@ -132,7 +135,37 @@
 <body>
   <div class="wrapper" id="app">
     <!-- header -->
-    <header></header>
+    <header>
+      <div class="navbar navbar-default navbar-fixed-top navcation">
+        <!-- <div class="container"> -->
+        <div class="navbar-header">
+          <div class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><img src="images/menu_30.png"
+              alt="">菜单</div>
+          <a class="navbar-brand hidden-sm">
+            <img class="navbar_brand_logo" src="images/waves-logo-black.svg" alt="">
+          </a>
+          <a class="m_download" href="https://waves.exchange/" target="_blank">交易所</a>
+        </div>
+        <div class="navbar-collapse collapse" role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="nav_li"><a href="/index.html" target="_blank">首页</a></li>
+            <li class="nav_li"><a href="/news.html" target="_blank" class="nav_news">新闻</a></li>
+            <li class="nav_li"><a href="https://wavesprotocol.org/protocol" target="_blank">协议</a></li>
+            <li class="nav_li"><a href="https://wavesprotocol.org/developers" target="_blank">开发者</a></li>
+            <li class="nav_li"><a href="https://wavesprotocol.org/use-cases" target="_blank">用例</a></li>
+            <li class="nav_li"><a class="reddot" href="https://medium.com/wavesprotocol" target="_blank">博客</a></li>
+            <li class="nav_li"><a class="nav_team" href="/team.html" target="_blank">团队</a></li>
+          </ul>
+          <ul class="hidden-xs nav navbar-nav navbar-right">
+            <li class="download">
+              <a href="https://github.com/wavesfx/wavesfx/releases" style="color: aliceblue;"
+                target="_blank">Download</a>
+            </li>
+          </ul>
+        </div>
+        <!-- </div> -->
+      </div>
+    </header>
 
     <div class="news">
       <template>
@@ -153,16 +186,114 @@
     </div>
 
     <!-- footer -->
-    <footer></footer>
+    <footer>
+      <!-- 加入 -->
+      <div class="join">
+        <div class="container">
+          <div class="join_us">
+            <h3>Waves Platform</h3>
+            <div class="line border_white"></div>
+            <p class="text-center">Waves最初于2016年推出。</p>
+            <p class="text-center">开放式区块链协议与去中心化应用工具包。</p>
+            <p class="text-center">平台提供去中心化应用的开发和运行工具,并托管各种用例 – 从去中心化交易和稳定币到去中心化自治组织和游戏等。</p>
+            <p class="text-center">Waves Association通过鼓励研究、管理Waves生态系统和开发Waves技术栈推动全球对Web 3.0范例的采用。</p>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row white-paper">
+            <div class="col-sm-offset-1 col-xs-6 col-sm-2">
+              <a href="./source/waves白皮书.pdf" download="waves白皮书.pdf" target="_blank">waves 白皮书</a>
+            </div>
+            <div class="col-sm-offset-1 col-xs-6 col-sm-2">
+              <a href="./source/Neutrino WP 01.04.12_Simplified_Chinese.pdf"
+                download="eutrino WP 01.04.12_Simplified_Chinese.pdf" target="_blank">Neutrino 白皮书</a>
+            </div>
+            <div class="col-sm-offset-1 col-xs-6 col-sm-2">
+              <a href="./source/Gravity白皮书.pdf" download="Gravity白皮书.pdf" target="_blank">Gravity 白皮书</a>
+            </div>
+            <div class="col-sm-offset-1 col-xs-6 col-sm-2">
+              <a href="">Enterprise 简介</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row marg_bottom_30 contact_mark">
+          <div class="col-sm-offset-2 col-sm-12">
+            <div class="col-sm-1 col-xs-3 footer_icon">
+              <a href="https://github.com/wavesplatform/"><i class="fa fa-github fa-lg"
+                  style="color: aliceblue;"></i></a>
+            </div>
+            <div class="col-sm-1 col-xs-3 footer_icon">
+              <a href="https://twitter.com/wavesprotocol"><i class="fa fa-twitter fa-lg"
+                  style="color: aliceblue;"></i></a>
+            </div>
+            <div class="col-sm-1 col-xs-3 footer_icon">
+              <a href="https://www.youtube.com/channel/UCYDQN4Fo4rGnOZ22L5plNIw"><i class="fa fa-youtube-play fa-lg"
+                  style="color: aliceblue;"></i></a>
+            </div>
+            <div class="col-sm-1 col-xs-3 footer_icon">
+              <a href="https://telegram.me/wavesnews"><i class="fa fa-telegram fa-lg" style="color: aliceblue;"></i></a>
+            </div>
+            <div class="col-sm-1 col-xs-3 footer_icon">
+              <a href="https://vk.com/wavesprotocol"><i class="fa fa-vk fa-lg" style="color: aliceblue;"></i></a>
+            </div>
+            <div class="col-sm-1 col-xs-3 footer_icon">
+              <a href="https://blog.wavesplatform.com/"><i class="fa fa-medium fa-lg" style="color: aliceblue;"></i></a>
+            </div>
+            <div class="col-sm-1 col-xs-3 footer_icon">
+              <a href="https://www.reddit.com/r/Wavesplatform/"><i class="fa fa-reddit-alien fa-lg"
+                  style="color: aliceblue;"></i></a>
+            </div>
+            <div class="col-sm-1 col-xs-3 footer_icon">
+              <a href="https://discordapp.com/invite/cnFmDyA"><i class="fa fa-heartbeat fa-lg"
+                  style="color: aliceblue;"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="row marg_bottom_60 footer_nav">
+          <div class="col-sm-offset-1 col-sm-11">
+            <div class="col-xs-4 col-sm-2 footer_nav_item">
+              <a class="floor_nav" href="https://wavesassociation.org/"><img src="images/waves-logo.svg" alt=""></a>
+            </div>
+            <div class="col-xs-4 col-sm-2 footer_nav_item">
+              <p><a class="floor_nav" href="https://wavesassociation.org/">Waves Association</a></p>
+              <p><a class="floor_nav" href="https://wavesenterprise.com/">Waves Enterprise</a></p>
+              <p><a class="floor_nav" href="https://medium.com/@neutrinoteam">Neutrino Protocol</a></p>
+              <p><a class="floor_nav" href="https://medium.com/@gravityprotocol">Gravity Protocol</a></p>
+            </div>
+            <div class="col-xs-4 col-sm-2 footer_nav_item">
+              <p><a class="floor_nav" href="https://docs.wavesprotocol.org/">Documentation</a></p>
+              <p><a class="floor_nav" href="https://github.com/wavesplatform">GitHub</a></p>
+              <p><a class="floor_nav" href="https://wavesexplorer.com/">Explorer</a></p>
+              <p><a class="floor_nav" href="https://stepik.org/course/54415/promo">Web3 Course</a></p>
+            </div>
+            <div class="col-xs-4 col-sm-2 footer_nav_item">
+              <p><a class="floor_nav" href="https://medium.com/wavesprotocol">Blog</a></p>
+              <p><a class="floor_nav" href="https://wavesprotocol.org/resources">Сommunity resources</a></p>
+              <p><a class="floor_nav" href="https://wavesprotocol.org/waves-101">Waves 101</a></p>
+            </div>
+            <div class="col-xs-4 col-sm-2 footer_nav_item">
+              <a class="floor_nav" href="https://wavesprotocol.org/mining-and-leasing">Leasing</a>
+            </div>
+            <div class="col-xs-4 col-sm-2 footer_nav_item">
+              <p><a class="floor_nav" href="https://wavesprotocol.org/coockie_policy_2020.pdf">Cookies</a></p>
+              <p><a class="floor_nav" href="https://wavesprotocol.org/privacy_policy.pdf">Privacy policy</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center copy">
+          Waves 去信任化环境 为基于信任的企业创造
+        </div>
+      </div>
+    </footer>
   </div>
 </body>
 <script src="js/main.js"></script>
 <script>
-  //juqery
-  $(document).ready(function () {
-    $("header").load("http://test.lllll.tech/header.html");
-    $("footer").load("http://test.lllll.tech/footer.html");
-  });
   //vue
   Vue.filter("dateFilter", function (date, formatPattern) {
     return moment(date).format(formatPattern || "YYYY-MM-DD HH:mm:ss");
